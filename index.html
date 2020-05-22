@@ -1,7 +1,42 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Fermin Quant</title>
+        <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+    </head>
     <body>
-        <h1>Hello World</h1>
-        <p>I'm hosted with GitHub Pages.</p>
+        <header class='flex bg-white px-6 py-4 justify-between items-center border-b-2 inset-x-0 fixed'>
+            <div class='flex items-center'>
+                <img class='h-16 rounded-full' src="images/me.jpg" alt="A photo of me">
+                <div class='px-2'>
+                    <div class='text-2xl'>
+                        Fermin Quant
+                    </div>
+                    <div class='flex justify-center space-x-2'>
+                        <a href="https://github.com/ferminquant" target="_blank">
+                            <img class='h-6' src="images/GitHub-Mark-32px.png" alt="Github Logo">
+                        </a>
+                        <a href="https://www.linkedin.com/in/ferminquant/" target="_blank">
+                            <img class='h-6' src="images/LI-In-Bug.png" alt="LinkedIn Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav class='flex justify-center space-x-4'>
+                <a class='font-bold' href="index.html">Home</a>
+                <a class='hover:text-gray-800' href="about.html">About</a>
+            </nav>
+        </header>
+        <div class='flex items-center h-screen justify-center'>
+            <img class='' src="images/wip-icon.png" alt="Work in progress image">
+        </div>        
+        <main class='flex hidden'>
+            <div id='sidebar' class='w-1/4 border-b-2 border-r-2 bg-red-500' >
+                This is the sidebar
+            </div>
+            <div id='content' class="w-3/4 bg-blue-500">
+                Content goes here
+            </div>
+        </main>
     </body>
 </html>
