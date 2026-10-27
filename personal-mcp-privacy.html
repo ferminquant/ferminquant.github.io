@@ -51,10 +51,15 @@
           <li>
             <code>https://www.googleapis.com/auth/calendar.events</code>: read and change
             events on the user's calendars. The application's current tools can create,
-            update, or delete one event when explicitly requested. They do not expose
-            invitations, sharing, calendar creation, or calendar deletion.
+            update, or delete one event and add or remove attendees when explicitly
+            requested. They can send invitation or update emails when requested. They do
+            not expose sharing, calendar creation, or calendar deletion.
           </li>
         </ul>
+        <p class="mt-2">
+          When the user asks to invite attendees, their email addresses are sent to
+          Google Calendar so it can deliver the invitation or update.
+        </p>
       </section>
 
       <section>
