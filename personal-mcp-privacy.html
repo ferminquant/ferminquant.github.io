@@ -35,18 +35,19 @@
         <h2 class="text-xl font-bold text-gray-900">Google data accessed</h2>
         <p class="mt-2">
           With the user's permission, the application requests the Google OAuth scope
-          <code>https://www.googleapis.com/auth/spreadsheets.readonly</code>. This allows it
-          to read spreadsheet metadata, sheet names, and cell values from spreadsheets the
-          user asks it to read. It does not request permission to edit, delete, create, or
-          share spreadsheets.
+          <code>https://www.googleapis.com/auth/spreadsheets</code>. Google describes that
+          scope as permission to see, edit, create, and delete all of the user's Google
+          Sheets spreadsheets. The application's current tools only read metadata and cell
+          values, update values in an explicitly requested range, and append rows. They do
+          not expose creating, deleting, or sharing spreadsheets.
         </p>
       </section>
 
       <section>
         <h2 class="text-xl font-bold text-gray-900">How data is used</h2>
         <p class="mt-2">
-          Spreadsheet data is read only to answer the user's request inside their personal
-          AI assistant. The data may be sent to the AI model provider configured in that
+          Spreadsheet data is read or updated only to answer the user's request inside their
+          personal AI assistant. The data may be sent to the AI model provider configured in that
           assistant so the model can process the request. That provider's own terms and
           privacy policy apply to that processing. The data is not used for advertising and
           is not sold.
