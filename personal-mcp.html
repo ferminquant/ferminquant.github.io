@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>personal-mcp</title>
+  <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header class="border-b-2 border-gray-200 bg-white">
+    <div class="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a class="font-bold text-xl" href="index.html">Fermin Quant</a>
+      <nav class="space-x-4">
+        <a class="hover:text-gray-600" href="index.html">Home</a>
+        <a class="font-bold text-gray-900" href="personal-mcp.html">personal-mcp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold">personal-mcp</h1>
+    <p class="mt-4 text-lg text-gray-700">
+      A private, local tool that lets a personal AI assistant read selected Google Sheets.
+    </p>
+
+    <section class="mt-8 space-y-4 text-gray-700">
+      <p>
+        personal-mcp runs on the operator's own computer. It is not a hosted service and it
+        does not provide accounts to the public. The Google integration is limited to the
+        <strong>spreadsheets.readonly</strong> scope and is used only when the operator asks
+        the assistant to read a spreadsheet.
+      </p>
+      <p>
+        Google OAuth tokens are stored locally by the assistant on the operator's machine.
+        The tool does not operate a server that receives or stores Google user data.
+      </p>
+      <p>
+        The tool is used by the operator and a small number of people known personally to
+        them. Access may be limited to allowlisted test users while the integration is being
+        developed.
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-bold">What it can access</h2>
+      <ul class="mt-3 list-disc pl-6 space-y-2 text-gray-700">
+        <li>Spreadsheet metadata and sheet names.</li>
+        <li>Cell values in ranges the operator explicitly requests.</li>
+        <li>Read-only access. It cannot edit, delete, share, or create spreadsheets.</li>
+      </ul>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-bold">Privacy</h2>
+      <p class="mt-3 text-gray-700">
+        See the
+        <a class="underline" href="personal-mcp-privacy.html">personal-mcp privacy policy</a>
+        for how Google user data is accessed, used, and retained.
+      </p>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-bold">Contact</h2>
+      <p class="mt-3 text-gray-700">
+        Questions about this integration can be sent to
+        <a class="underline" href="mailto:ferminquant@gmail.com">ferminquant@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="border-t-2 border-gray-200 bg-white">
+    <div class="max-w-3xl mx-auto px-6 py-6 text-sm text-gray-500">
+      © 2026 Fermin Quant ·
+      <a class="underline" href="personal-mcp-privacy.html">Privacy</a>
+    </div>
+  </footer>
+</body>
+</html>
