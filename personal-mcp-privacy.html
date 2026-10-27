@@ -26,28 +26,41 @@
         <h2 class="text-xl font-bold text-gray-900">What this is</h2>
         <p class="mt-2">
           personal-mcp is a local application used by Fermin Quant and a small number of
-          personally known users. It allows a personal AI assistant to read Google Sheets and Google Calendar
-          that the user explicitly identifies.
+          personally known users. It allows a personal AI assistant to read and update Google Sheets and to read, create, update, and delete Google Calendar events that the user explicitly identifies.
         </p>
       </section>
 
       <section>
         <h2 class="text-xl font-bold text-gray-900">Google data accessed</h2>
         <p class="mt-2">
-          With the user's permission, the application requests the Google OAuth scope
-          <code>https://www.googleapis.com/auth/spreadsheets</code>. Google describes that
-          scope as permission to see, edit, create, and delete all of the user's Google
-          Sheets spreadsheets. The application's current tools only read metadata and cell
-          values, update values in an explicitly requested range, append rows, and set
-          display formats and cell styles such as percentages, colours, bold, and alignment. They do not expose creating,
-          deleting, or sharing spreadsheets.
+          With the user's permission, the application requests these Google OAuth scopes:
         </p>
+        <ul class="mt-2 list-disc pl-6 space-y-2">
+          <li>
+            <code>https://www.googleapis.com/auth/spreadsheets</code>: Google describes
+            this as permission to see, edit, create, and delete all of the user's Google
+            Sheets spreadsheets. The application's current tools only read metadata and
+            cell values, update values in an explicitly requested range, append rows, and
+            set display formats and cell styles such as percentages, colours, bold, and
+            alignment. They do not expose creating, deleting, or sharing spreadsheets.
+          </li>
+          <li>
+            <code>https://www.googleapis.com/auth/calendar.readonly</code>: read the
+            user's calendars and events.
+          </li>
+          <li>
+            <code>https://www.googleapis.com/auth/calendar.events</code>: read and change
+            events on the user's calendars. The application's current tools can create,
+            update, or delete one event when explicitly requested. They do not expose
+            invitations, sharing, calendar creation, or calendar deletion.
+          </li>
+        </ul>
       </section>
 
       <section>
         <h2 class="text-xl font-bold text-gray-900">How data is used</h2>
         <p class="mt-2">
-          Spreadsheet and calendar data are read or updated only to answer the user's
+          Spreadsheet and calendar data are read or changed only to answer the user's
           request inside their personal AI assistant. The data may be sent to the AI model provider configured in that
           assistant so the model can process the request. That provider's own terms and
           privacy policy apply to that processing. The data is not used for advertising and
